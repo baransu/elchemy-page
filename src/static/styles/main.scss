@@ -1,0 +1,503 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#code-editor {
+  border-radius: 5px;
+}
+
+#code-editor,
+.CodeMirror {
+  position: relative;
+  background-color: hsl(220, 13%, 18%);
+  line-height: 1.42857;
+  height: 100%;
+}
+
+.CodeMirror {
+  padding: 9.5px;
+}
+
+#error-dialog {
+  color: #e96443;
+}
+
+#root {
+  box-sizing: border-box;
+}
+
+pre {
+  margin: 0;
+  color: #abb2bf;
+  background-color: #282c34;
+}
+
+/*!
+ * Start Bootstrap - Stylish Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+/* Custom Button Styles */
+
+.btn {
+  box-shadow: 0.01em 0.01em 1px rgba(78, 81, 83, .6);
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 1.8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-light {
+  color: #333;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+  max-width: 100px;
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  transform: translateX(250px);
+  overflow-y: auto;
+  background: #222;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
+}
+
+/* Header */
+
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e96443;
+  background: linear-gradient(to right, #e96443, #904e95);
+  background-size: cover;
+  color: #fff;
+
+  .github-stars {
+    margin-top: 40px;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      display: block;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        margin: 10px 20px;
+        a {
+          color: white;
+          font-size: 20px;
+          text-decoration: none;
+          &:hover {
+            padding-bottom: 4px;
+            border-bottom: 3px solid white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 2px 7px 0 rgba(11, 45, 90, .12);
+    border-radius: 5px;
+  }
+  figcaption {
+    color: #4e5153;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    text-align: center;
+    margin: 1.5rem 0 5rem;
+  }
+}
+
+.head {
+  text-align: center;
+  h1 {
+    color: #e96443;
+    margin: 100px;
+  }
+}
+
+.editor {
+  .row.full {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.full > figure [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  figure {
+    margin-bottom: 25px;
+  }
+  figure > .card {
+    height: 100%;
+    // box-shadow: 0 2px 7px 0 rgba(11, 45, 90, .12);
+    border-radius: 5px !important;
+  }
+}
+
+/* Footer */
+
+footer {
+  padding: 80px 0;
+}
+
+/*
+    Name:       one-dark
+    Author:     Török Ádám (http://github.com/Aerobird98)
+
+    Original Atom One Dark Theme (https://github.com/atom/one-dark-syntax & https://github.com/atom/one-dark-ui)
+*/
+
+/* UI Theme /----------------------------------------------------------------------------------- */
+
+.CodeMirror-gutters {
+  background-color: hsl(220, 13%, 18%);
+  border-color: hsl(220, 13%, 18%);
+}
+
+.cm-s-one-dark .CodeMirror,
+.cm-s-one-dark .CodeMirror-scroll {
+  font-family: 'Inconsolata, Monaco, Consolas, 'Courier New', Courier';
+  font-weight: 300;
+  font-size: 13px;
+
+  background-color: hsl(220, 13%, 18%);
+  color: hsl(220, 14%, 71%);
+}
+.cm-s-one-dark div.CodeMirror-selected {
+  background: rgba(204, 217, 255, 0.05);
+}
+.cm-s-one-dark .CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(204, 217, 255, 0.09);
+}
+.cm-s-one-dark .CodeMirror-lines {
+  padding: 4px 0; /* Vertical padding around content */
+}
+.cm-s-one-dark .CodeMirror pre {
+  padding: 0 4px; /* Horizontal padding of content */
+}
+
+/* Gutter & Folding */
+
+.cm-s-one-dark .CodeMirror .CodeMirror-gutters,
+.cm-s-one-dark .CodeMirror-gutter {
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+}
+.cm-s-one-dark .CodeMirror-linenumber {
+  padding: 0 15px 0 0;
+  min-width: 20px;
+  text-align: right;
+  white-space: nowrap;
+  color: #5c6370;
+}
+/* ...folding addon: fold/...  */
+.cm-s-one-dark .CodeMirror-foldmarker {
+  line-height: .3;
+  cursor: pointer;
+  color: hsl(220, 14%, 71%);
+  background: rgba(204, 217, 255, 0.05);
+}
+.cm-s-one-dark .CodeMirror-foldgutter {
+  width: 15px;
+  border: none;
+}
+.cm-s-one-dark .CodeMirror-foldgutter-open,
+.cm-s-one-dark .CodeMirror-foldgutter-folded {
+  cursor: pointer;
+}
+.cm-s-one-dark .CodeMirror-foldgutter-open:after {
+  content: "\25BE";
+  color: hsl(220, 10%, 25%);
+}
+.cm-s-one-dark .CodeMirror.over-gutter,
+.cm-s-one-dark .CodeMirror-activeline .CodeMirror-foldgutter-open:after {
+  color: hsl(220, 10%, 40%);
+}
+.cm-s-one-dark .CodeMirror-foldgutter-folded:after {
+  content: "\25B8";
+  color: hsl(220, 10%, 40%);
+}
+/* ...misc */
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  background-color: #ccc; /* The little square between H and V scrollbars */
+}
+
+/* Cursor */
+
+.cm-s-one-dark .CodeMirror-cursor {
+  border-left: 2px solid hsl(220, 100%, 66%) !important;
+}
+.cm-s-one-dark .CodeMirror-overwrite .CodeMirror-cursor {
+  border-left: none !important;
+  border-bottom: 1px solid #fff;
+}
+
+/* Popular addons */
+
+/* addon: adit/machingbrackets.js & addon: edit/matchtags.js   */
+.cm-s-one-dark .CodeMirror-matchingbracket,
+.cm-s-one-dark .CodeMirror-matchingtag {
+  /* Ensure visibility against gray inline editor background */
+  background-color: rgba(204, 217, 255, 0.09);
+  color: hsl(220, 14%, 71%) !important;
+  border-bottom: 1px solid hsl(220, 100%, 66%);
+}
+
+/* Syntax Theme /---------------------------------------------------------------------------------- */
+
+/* markdown */
+.cm-s-one-dark .cm-header {
+  color: #e06c75;
+}
+.cm-s-one-dark .cm-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.cm-s-one-dark .cm-negative {
+  color: #e06c75;
+}
+.cm-s-one-dark .cm-positive {
+  color: #e06c75;
+}
+
+.cm-s-one-dark .cm-strong {
+  color: #d19a66;
+  font-weight: bold;
+}
+.cm-s-one-dark .cm-header .cm-strong {
+  color: #d19a66;
+  font-weight: bold;
+}
+
+.cm-s-one-dark .cm-em {
+  color: #c678dd;
+  font-style: italic;
+}
+.cm-s-one-dark .cm-header .cm-em {
+  color: #c678dd;
+  font-style: italic;
+}
+
+/* xml, html, ... */
+.cm-s-one-dark .cm-tag {
+  color: #e06c75;
+}
+.cm-s-one-dark .cm-attribute {
+  color: #d19a66;
+}
+.cm-s-one-dark .cm-link {
+  color: #98c379;
+  border-bottom: solid 1px #98c379;
+}
+
+/* other ... (for example javascript) */
+.cm-s-one-dark .cm-builtin {
+  color: #e06c75;
+}
+.cm-s-one-dark .cm-keyword {
+  color: #c678dd;
+}
+.cm-s-one-dark .cm-def {
+  color: #e5c07b;
+} /* original:  #d19a66; */
+
+.cm-s-one-dark .cm-atom {
+  color: #d19a66;
+}
+.cm-s-one-dark .cm-number {
+  color: #d19a66;
+}
+.cm-s-one-dark .cm-property {
+  color: #61afef;
+} /* original: #abb2bf */
+.cm-s-one-dark .cm-qualifier {
+  color: #d19a66;
+}
+
+.cm-s-one-dark .cm-variable {
+  color: #e06c75;
+}
+.cm-s-one-dark .cm-variable-2 {
+  color: #abb2bf;
+}
+.cm-s-one-dark .cm-variable-3 {
+  color: #e5c07b;
+}
+
+.cm-s-one-dark .cm-string {
+  color: #98c379;
+}
+.cm-s-one-dark .cm-string-2 {
+  color: #98c379;
+}
+
+.cm-s-one-dark .cm-punctuation {
+  color: #abb2bf;
+}
+.cm-s-one-dark .cm-operator {
+  color: #abb2bf;
+}
+.cm-s-one-dark .cm-meta {
+  color: #abb2bf;
+}
+.cm-s-one-dark .cm-bracket {
+  color: #abb2bf;
+}
+.cm-s-one-dark .cm-comment {
+  color: #5c6370;
+  font-style: italic;
+}

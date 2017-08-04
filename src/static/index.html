@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elchemy</title>
+  <link rel="stylesheet" href="https://esironal.github.io/cmtouch/lib/codemirror.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-dark.min.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="top" class="header">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">examples</a></li>
+        <li><a href="#">docs</a></li>
+        <li><a href="http://github.com/wende/elchemy">github</a></li>
+      </ul>
+    </div>
+    <div class="text-vertical-center">
+      <h1>Elchemy</h1>
+      <h4>Write Elixir code using Elm-like syntax</h4>
+      <br>
+      <a href="#get started" class="btn btn-dark btn-lg">Get started</a>
+      <a href="#instal" class="btn btn-dark btn-lg">Install</a>
+      <div class="github-stars">
+        <!-- Place this tag where you want the button to render. -->
+        <a style="margin: auto;" class="github-button" href="https://github.com/wende/elchemy" data-icon="octicon-star" data-style="mega" data-count-href="/wende/elchemy/stargazers" data-count-api="/repos/wende/elchemy#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star wende/elchemy on GitHub">Star</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row head">
+        <h1>some nice header about features</h1>
+      </div>
+      <div class="row">
+        <figure class="col-md-6 col-xs-12">
+          <img src="static/img/screen.png" />
+          <figcaption>feature 1</figcaption>
+        </figure>
+        <figure class="col-md-6 col-xs-12">
+          <img src="static/img/screen.png" />
+          <figcaption>feature 2</figcaption>
+        </figure>
+        <figure class="col-md-6 col-xs-12">
+          <img src="static/img/screen.png" />
+          <figcaption>feature 3</figcaption>
+        </figure>
+        <figure class="col-md-6 col-xs-12">
+          <img src="static/img/screen.png" />
+          <figcaption>feature n</figcaption>
+        </figure>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <section class="editor">
+    <div class="container">
+      <div class="row head">
+        <h1>some nice header about try in online</h1>
+      </div>
+      <div class="row full">
+        <figure class="col-md-6 col-xs-12">
+          <div class="card">
+            <div id="code-editor"></div>
+          </div>
+        </figure>
+        <figure class="col-md-6 col-xs-12">
+          <div class="card" id="root"></div>
+        </figure>
+        <figure class="col-xs-12">
+          <div id="error-dialog"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <hr class="small">
+          <p class="text-muted">Elchemy <i class="fa fa-copyright" aria-hidden="true"></i> Krzysztof Wende</p>
+          <a href="https://github.com/baransu" class="text-muted"><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by Tomasz Cichocinski</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://esironal.github.io/cmtouch/lib/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/elm/elm.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/elm.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/elixir.min.js"></script>
+  <script src="elm.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
