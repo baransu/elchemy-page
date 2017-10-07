@@ -15,7 +15,7 @@ body {
 }
 
 .top-space {
-    padding: 50px;
+  padding: 50px;
 }
 
 /* .chemy { */
@@ -28,14 +28,14 @@ body {
 /* } */
 
 .elchemy-title {
-    max-width: 600px;
-    font-weight: 200;
-    font-size: 1.6em;
-    line-height: 1.5em;
-    text-align: center;
-    padding: 0.8em;
-    margin-bottom: 0;
-    font-family: Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+  max-width: 600px;
+  font-weight: 200;
+  font-size: 1.6em;
+  line-height: 1.5em;
+  text-align: center;
+  padding: 0.8em;
+  margin-bottom: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
 #code-editor {
@@ -64,14 +64,22 @@ body {
 
 pre {
   margin: 0;
-  color: #abb2bf;
-  background-color: #282c34;
+}
+
+.top-code {
+  pre {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+  }
 }
 
 .install-snippet {
   display: inline-block;
   margin-top: 40px;
   pre {
+    color: #abb2bf;
+    background-color: #282c34;
     display: flex;
     align-items: center;
     padding: 0 40px;
