@@ -30,7 +30,7 @@ body {
 .elchemy-title {
   max-width: 600px;
   font-weight: 200;
-  font-size: 1.6em;
+  font-size: 1.9em;
   line-height: 1.5em;
   text-align: center;
   padding: 0.8em;
@@ -70,12 +70,13 @@ pre {
 
 .top-code {
   pre {
+    word-spacing: 5px;
+    line-height: 6.5mm;
     background-color: transparent;
     color: #fff;
     border: none;
   }
 }
-
 .install-snippet {
   display: inline-block;
   margin-top: 40px;
@@ -312,7 +313,7 @@ hr.small {
 .head {
   text-align: center;
   h1 {
-    color: $error-color;
+    color: #5669aa;
     margin: 100px;
   }
 }
@@ -500,10 +501,10 @@ footer {
 
 /* other ... (for example javascript) */
 .cm-s-one-dark .cm-builtin {
-  color: #e06c75;
+  color: #babbbf;
 }
 .cm-s-one-dark .cm-keyword {
-  color: #c678dd;
+  color: #3bbcc3;
 }
 .cm-s-one-dark .cm-def {
   color: #e5c07b;
@@ -523,7 +524,7 @@ footer {
 }
 
 .cm-s-one-dark .cm-variable {
-  color: #e06c75;
+  color: #babbbf;
 }
 .cm-s-one-dark .cm-variable-2 {
   color: #abb2bf;
