@@ -56,6 +56,16 @@ body {
 
 #error-dialog {
   color: $error-color;
+  padding-bottom: 50px;
+}
+.error-dialog {
+  position: absolute;
+  background-color: RGBA(255,255,255,0.9);
+  padding-left: 50px;
+}
+#error-dialog:empty
+{
+    display:none;
 }
 
 #root {
@@ -534,7 +544,7 @@ footer {
 }
 
 .cm-s-one-dark .cm-string {
-  color: #98c379;
+  color: #fe8451;
 }
 .cm-s-one-dark .cm-string-2 {
   color: #98c379;
