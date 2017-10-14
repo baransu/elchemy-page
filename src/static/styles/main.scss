@@ -28,11 +28,11 @@ body {
 /* } */
 
 .elchemy-title {
-  max-width: 600px;
+  // max-width: 600px;
   font-weight: 200;
   font-size: 1.9em;
   line-height: 1.5em;
-  text-align: center;
+  // text-align: center;
   padding: 0.8em;
   margin-bottom: 0;
   font-family: Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
@@ -60,12 +60,11 @@ body {
 }
 .error-dialog {
   position: absolute;
-  background-color: RGBA(255,255,255,0.9);
+  background-color: RGBA(255, 255, 255, 0.9);
   padding-left: 50px;
 }
-#error-dialog:empty
-{
-    display:none;
+#error-dialog:empty {
+  display: none;
 }
 
 #root {
@@ -85,11 +84,18 @@ pre {
     background-color: transparent;
     color: #fff;
     border: none;
+    display: flex;
+    justify-content: center;
   }
 }
+
+.install-snippet-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .install-snippet {
-  display: inline-block;
-  margin-top: 40px;
+  margin: 40px auto;
   pre {
     display: flex;
     align-items: center;
@@ -251,7 +257,7 @@ hr.small {
 .header {
   display: table;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: $elixir-color;
   background: linear-gradient(to right, $elixir-color, $elm-color);
@@ -260,7 +266,7 @@ hr.small {
 
   .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -271,20 +277,23 @@ hr.small {
   }
 
   .navigation {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0;
+    right: 0;
     ul {
+      width: 100%;
       margin: 0;
       padding: 0;
       list-style-type: none;
-      text-align: center;
-      display: block;
+      justify-content: center;
+      display: flex;
       list-style-type: none;
       li {
-        display: inline-block;
-        margin: 10px 20px;
+        text-align: center;
+        padding: 10px 20px;
         a {
           color: white;
           font-size: 20px;
@@ -318,13 +327,19 @@ hr.small {
     text-align: center;
     margin: 1.5rem 0 5rem;
   }
+
+  figure {
+    img {
+      max-height: 275px;
+    }
+  }
 }
 
 .head {
   text-align: center;
   h1 {
     color: #5669aa;
-    margin: 100px;
+    margin: 25px auto 75px;
   }
 }
 
@@ -353,7 +368,7 @@ hr.small {
 /* Footer */
 
 footer {
-  padding: 80px 0;
+  padding: 75px 0;
 }
 
 /*

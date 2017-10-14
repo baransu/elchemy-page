@@ -10,4 +10,3 @@ yarn && yarn start
 
 ### TODO
 * [ ] examples visualization using [elm-codepress](https://github.com/baransu/elm-codepress)
-* [ ] fill with content
