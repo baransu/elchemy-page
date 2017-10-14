@@ -12,5 +12,11 @@
     "evancz/elm-markdown": "3.0.1 <= v < 4.0.0",
     "wende/elchemy": "0.0.0 <= v < 2.0.0"
   },
+  "dependency-sources": {
+    "wende/elchemy": {
+      "url": "git@github.com:wende/elchemy",
+      "ref": "0.4.50"
+    }
+  },
   "elm-version": "0.18.0 <= v < 0.19.0"
 }
