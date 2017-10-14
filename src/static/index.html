@@ -2,6 +2,15 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87274735-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-87274735-2');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elchemy</title>
@@ -25,7 +34,7 @@
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="navigation">
+        <div class="navigation row">
             <ul>
                 <li>
                     <a href="#try-online">try now</a>
@@ -35,11 +44,11 @@
                 </li>
             </ul>
         </div>
-        <div class="text-vertical-center">
-            <h1>
+        <div class="text-vertical-center row" >
+            <h1 style="margin-top:100px">
                 <span class="el">El</span><span class="chemy">chemy</span>
             </h1>
-            <div class="top-space col-md-10 col-md-offset-1">
+            <div class="row top-space col-md-10 col-md-offset-1">
                 <div class="col-md-6 col-xs-12 top-code" style="font-size: 5mm; font-family: 'Hasklig';text-align: left">
                     <pre><code>
 <b>type</b> Language = Elixir | Elm | Both
@@ -56,7 +65,7 @@ perks language =
                     Elixir's ecosystem. </div>
             </div>
             <br>
-            <div class="buttons col-md-12">
+            <div class="row buttons col-md-12">
                 <a href="#try-online" class="btn btn-dark btn-lg">Try online</a>
                 <!-- <a href="#install" class="btn btn-dark btn-lg">Install</a> -->
                 <div class="github-stars">
