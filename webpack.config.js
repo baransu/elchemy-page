@@ -17,7 +17,7 @@ const isProd = TARGET_ENV == prod;
 // entry and output path/filename variables
 const entryPath = path.join(__dirname, 'src/static/index.js');
 const outputPath = path.join(__dirname, 'dist');
-const outputFilename = isProd ? '[name]-[hash].js' : '[name].js';
+const outputFilename = isProd ? '[name].[hash:8].js' : '[name].js';
 
 console.log('WEBPACK GO! Building for ' + TARGET_ENV);
 
@@ -37,14 +37,21 @@ var commonConfig = {
       {
         test: /\.(eot|ttf|woff|woff2|svg)$/,
         use: 'file-loader?publicPath=../../&name=static/css/[hash].[ext]'
+      },
+      {
+        test: /\.js$/,
+        loader: require.resolve('babel-loader'),
+        options: {
+          babelrc: false,
+          presets: [require.resolve('babel-preset-react-app')],
+          compact: true
+        }
       }
     ]
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [autoprefixer()]
-      }
+      options: { postcss: [autoprefixer()] }
     }),
     new HtmlWebpackPlugin({
       template: 'src/static/index.html',
@@ -119,7 +126,7 @@ if (isProd === true) {
     },
     plugins: [
       new ExtractTextPlugin({
-        filename: 'static/css/[name]-[hash].css',
+        filename: 'static/css/[name].[hash:8].css',
         allChunks: true
       }),
       new CopyWebpackPlugin([
@@ -131,16 +138,17 @@ if (isProd === true) {
           from: 'src/favicon.ico'
         }
       ]),
-
-      // extract CSS into a separate file
-      // minify & mangle JS/CSS
-      // new webpack.optimize.UglifyJsPlugin({
-      //   minimize: true,
-      //   compressor: {
-      //     warnings: false
-      //   }
-      //   // mangle:  true
-      // })
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false,
+          comparisons: false
+        },
+        output: {
+          comments: false,
+          ascii_only: true
+        },
+        sourceMap: false
+      })
     ]
   });
 }

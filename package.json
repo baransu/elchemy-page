@@ -9,11 +9,15 @@
     "url": ""
   },
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
+    "start": "NODE_ENV=development webpack-dev-server --hot --inline",
     "prebuild": "rimraf dist",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack -p"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react-app": "^3.0.3",
+    "bootstrap-sass": "^3.3.7",
     "autoprefixer": "^6.7.7",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.27.3",
@@ -31,8 +35,5 @@
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2",
     "webpack-merge": "^4.1.0"
-  },
-  "dependencies": {
-    "bootstrap-sass": "^3.3.7"
   }
 }
