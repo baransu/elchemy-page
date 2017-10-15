@@ -96,6 +96,9 @@ pre {
 
 .install-snippet {
   margin: 40px auto;
+  h4 {
+    margin-bottom: 20px;
+  }
   pre {
     display: flex;
     align-items: center;
@@ -326,12 +329,6 @@ hr.small {
     line-height: 3.5rem;
     text-align: center;
     margin: 1.5rem 0 5rem;
-  }
-
-  figure {
-    img {
-      max-height: 275px;
-    }
   }
 }
 
