@@ -10,29 +10,18 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .top-space {
   padding: 50px;
 }
 
-/* .chemy { */
-/*     border: 4px solid white; */
-/*     background-color: white; */
-/*     color: #576bab; */
-/* } */
-/* .el { */
-/*     border: 4px solid white; */
-/* } */
-
 .elchemy-title {
-  // max-width: 600px;
   font-weight: 200;
   font-size: 1.9em;
   line-height: 1.5em;
-  // text-align: center;
   padding: 0.8em;
   margin-bottom: 0;
   font-family: Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
@@ -287,16 +276,15 @@ hr.small {
     left: 0;
     right: 0;
     ul {
-      width: 100%;
       margin: 0;
       padding: 0;
       list-style-type: none;
-      justify-content: center;
-      display: flex;
-      list-style-type: none;
+      text-align: center;
       li {
+        display: inline-block;
         text-align: center;
-        padding: 10px 20px;
+        padding: 10px 0;
+        margin: 0 30px;
         a {
           color: white;
           font-size: 20px;
