@@ -1,8 +1,7 @@
 port module Main exposing (main)
 
+import Elchemy.Compiler as Compiler
 import Html exposing (..)
-import Html
-import Elchemy.Compiler
 import Markdown
 
 
@@ -13,7 +12,7 @@ type Msg
 
 view : String -> Html Msg
 view model =
-    Markdown.toHtml [] <| "```elixir\n" ++ (Compiler.tree model) ++ "\n```"
+    Markdown.toHtml [] <| "```elixir\n" ++ Compiler.tree model ++ "\n```"
 
 
 init : String -> ( String, Cmd Msg )
@@ -28,11 +27,10 @@ main =
         , update = update
         , view = view
         , subscriptions =
-            (\_ ->
+            \_ ->
                 Sub.batch
                     [ updateInput Replace
                     ]
-            )
         }
 
 
